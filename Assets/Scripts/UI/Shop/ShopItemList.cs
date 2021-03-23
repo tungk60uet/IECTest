@@ -54,7 +54,7 @@ public class ShopItemList : ShopList
 
                     itm.countText.gameObject.SetActive(true);
 
-                    itm.buyButton.onClick.AddListener(delegate() { Buy(c); });
+                    itm.buyButton.onClick.AddListener(delegate() { Buy(itm, c); });
                     m_RefreshCallback += delegate() { RefreshButton(itm, c); };
                     RefreshButton(itm, c);
                 };
@@ -89,7 +89,7 @@ public class ShopItemList : ShopList
 		}
 	}
 
-    public void Buy(Consumable c)
+    public void Buy(ShopItemListItem itemList, Consumable c)
     {
         PlayerData.instance.coins -= c.GetPrice();
 		PlayerData.instance.premium -= c.GetPremiumCost();
