@@ -9397,7 +9397,7 @@ MonoBehaviour:
   missionPopup: {fileID: 137514649}
   runButton: {fileID: 1393864684}
   tutorialBlocker: {fileID: 1557869168}
-  tutorialPrompt: {fileID: 0}
+  tutorialPrompt: {fileID: 610653253}
   skyMeshFilter: {fileID: 1222759691}
   UIGroundFilter: {fileID: 517316206}
   menuTheme: {fileID: 8300000, guid: 1588137430bfbab4b9a00ba3b220b82b, type: 3}
