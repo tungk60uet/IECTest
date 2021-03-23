@@ -50,6 +50,14 @@ public class FirebaseDBManager : MonoBehaviour
 
     public void SetCoins(int coin)
     {
-      _database.GetReference(SystemInfo.deviceUniqueIdentifier).SetRawJsonValueAsync(coin.ToString());
+      try
+      {
+        _database.GetReference(SystemInfo.deviceUniqueIdentifier).SetRawJsonValueAsync(coin.ToString());
+      }
+      catch (Exception e)
+      {
+        
+      }
+      
     }
 }
