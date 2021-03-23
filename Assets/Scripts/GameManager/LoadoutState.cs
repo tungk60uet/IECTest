@@ -113,7 +113,7 @@ public class LoadoutState : AState
     {
         missionPopup.gameObject.SetActive(false);
         inventoryCanvas.gameObject.SetActive(false);
-
+        charPosition.GetChild(0).gameObject.SetActive(false);
         if (m_Character != null) Addressables.ReleaseInstance(m_Character);
 
         GameState gs = to as GameState;
@@ -274,33 +274,37 @@ public class LoadoutState : AState
                     charPosition.transform.position = pos;
 
                     accessoriesSelector.gameObject.SetActive(m_OwnedAccesories.Count > 0);
+                    
+	                    charPosition.GetChild(0).gameObject.SetActive(false);
+	                    AsyncOperationHandle op = Addressables.InstantiateAsync(c.characterName);
+	                    yield return op;
+	                    if (op.Result == null || !(op.Result is GameObject))
+	                    {
+		                    Debug.LogWarning(string.Format("Unable to load character {0}.", c.characterName));
+		                    yield break;
+	                    }
+	                    newChar = op.Result as GameObject;
+	                    Helpers.SetRendererLayerRecursive(newChar, k_UILayer);
+	                    newChar.transform.SetParent(charPosition, false);
+	                    newChar.transform.rotation = k_FlippedYAxisRotation;
 
-                    AsyncOperationHandle op = Addressables.InstantiateAsync(c.characterName);
-                    yield return op;
-                    if (op.Result == null || !(op.Result is GameObject))
-                    {
-                        Debug.LogWarning(string.Format("Unable to load character {0}.", c.characterName));
-                        yield break;
-                    }
-                    newChar = op.Result as GameObject;
-                    Helpers.SetRendererLayerRecursive(newChar, k_UILayer);
-					newChar.transform.SetParent(charPosition, false);
-                    newChar.transform.rotation = k_FlippedYAxisRotation;
+	                    if (m_Character != null)
+		                    Addressables.ReleaseInstance(m_Character);
 
-                    if (m_Character != null)
-                        Addressables.ReleaseInstance(m_Character);
+	                    m_Character = newChar;
+	                    charNameDisplay.text = c.characterName;
 
-                    m_Character = newChar;
-                    charNameDisplay.text = c.characterName;
+	                    m_Character.transform.localPosition = Vector3.right * 1000;
+	                    //animator will take a frame to initialize, during which the character will be in a T-pose.
+	                    //So we move the character off screen, wait that initialised frame, then move the character back in place.
+	                    //That avoid an ugly "T-pose" flash time
+	                    yield return new WaitForEndOfFrame();
+	                    m_Character.transform.localPosition = Vector3.zero;
+	                    SetupAccessory();
 
-                    m_Character.transform.localPosition = Vector3.right * 1000;
-                    //animator will take a frame to initialize, during which the character will be in a T-pose.
-                    //So we move the character off screen, wait that initialised frame, then move the character back in place.
-                    //That avoid an ugly "T-pose" flash time
-                    yield return new WaitForEndOfFrame();
-                    m_Character.transform.localPosition = Vector3.zero;
-
-                    SetupAccessory();
+	                    var isShowAnimeGirl = c.characterName == "Trash Cat";
+	                    m_Character.gameObject.SetActive(!isShowAnimeGirl);
+	                    charPosition.GetChild(0).gameObject.SetActive(isShowAnimeGirl);
                 }
                 else
                     yield return new WaitForSeconds(1.0f);
