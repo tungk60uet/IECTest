@@ -1,5 +1,6 @@
 # IECTest
 2/ Tạo Cheat Menu tap góc trên phải 3 lần -> option
+
 7/ Một số hướng cải thiện game:
 - Phần core game xử lý nhiều thứ ở trong Update. Nên đưa ra các event,trigger, xử lý theo sự kiện (Event-Driven)
 - Chưa có hệ thống quản lý UI
