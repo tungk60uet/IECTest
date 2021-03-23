@@ -49,28 +49,28 @@ public class FirebaseDataBase : MonoBehaviour
     }
 
     protected void StartListener() {
-      FirebaseDatabase.DefaultInstance
-        .GetReference("User").OrderByChild("score")
-        .ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
-          if (e2.DatabaseError != null) {
-            Debug.LogError(e2.DatabaseError.Message);
-            return;
-          }
-          Debug.Log("Received values for Leaders.");
-          if (e2.Snapshot != null && e2.Snapshot.ChildrenCount > 0) {
-            foreach (var childSnapshot in e2.Snapshot.Children) {
-              if (childSnapshot.Child("score") == null
-                  || childSnapshot.Child("score").Value == null) {
-                Debug.LogError("Bad data in sample.");
-                break;
-              } else
-              {
-                childSnapshot.Child("email").Value.ToString() + " - " +
-                          childSnapshot.Child("score").Value.ToString());
-              }
-            }
-          }
-        };
+      // FirebaseDatabase.DefaultInstance
+      //   .GetReference("User").OrderByChild("score")
+      //   .ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
+      //     if (e2.DatabaseError != null) {
+      //       Debug.LogError(e2.DatabaseError.Message);
+      //       return;
+      //     }
+      //     Debug.Log("Received values for Leaders.");
+      //     if (e2.Snapshot != null && e2.Snapshot.ChildrenCount > 0) {
+      //       foreach (var childSnapshot in e2.Snapshot.Children) {
+      //         if (childSnapshot.Child("score") == null
+      //             || childSnapshot.Child("score").Value == null) {
+      //           Debug.LogError("Bad data in sample.");
+      //           break;
+      //         } else
+      //         {
+      //           childSnapshot.Child("email").Value.ToString() + " - " +
+      //                     childSnapshot.Child("score").Value.ToString());
+      //         }
+      //       }
+      //     }
+      //   };
     }
     
     // Output text to the debug log text field, as well as the console.

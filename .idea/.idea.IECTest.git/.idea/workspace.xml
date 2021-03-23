@@ -38,6 +38,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/LoadoutState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/FirebaseDataBase.cs" />
+      <option value="$PROJECT_DIR$/README.md" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1q9wCLdKOmqsC73SZIZ2SmoPzzk" />
@@ -84,7 +85,7 @@
       <workItem from="1616506330910" duration="154000" />
       <workItem from="1616506499000" duration="1008000" />
       <workItem from="1616507571034" duration="603000" />
-      <workItem from="1616508317575" duration="5124000" />
+      <workItem from="1616508317575" duration="6052000" />
     </task>
     <servers />
   </component>
