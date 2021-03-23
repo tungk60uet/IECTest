@@ -90,26 +90,6 @@
               <e p="LeanWindowCloser.cs" t="Include" />
             </e>
           </e>
-          <e p="Pool" t="Include">
-            <e p="Examples" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="LeanPoolDebugger.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Extras" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="LeanPooledRigidbody.cs" t="Include" />
-                <e p="LeanPooledRigidbody2D.cs" t="Include" />
-              </e>
-            </e>
-            <e p="LeanPool.asmdef" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="IPoolable.cs" t="Include" />
-              <e p="LeanClassPool.cs" t="Include" />
-              <e p="LeanGameObjectPool.cs" t="Include" />
-              <e p="LeanPool.cs" t="Include" />
-            </e>
-          </e>
           <e p="READ ME.txt" t="Include" />
           <e p="Transition" t="Include">
             <e p="Examples" t="Include">
@@ -559,7 +539,6 @@
       <e p="IECTest.git.sln" t="IncludeFlat" />
       <e p="LeanCommon.csproj" t="IncludeRecursive" />
       <e p="LeanGUI.csproj" t="IncludeRecursive" />
-      <e p="LeanPool.csproj" t="IncludeRecursive" />
       <e p="LeanTransition.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

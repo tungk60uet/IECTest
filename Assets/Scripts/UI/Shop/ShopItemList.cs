@@ -10,6 +10,8 @@ public class ShopItemList : ShopList
 {
 	static public Consumable.ConsumableType[] s_ConsumablesTypes = System.Enum.GetValues(typeof(Consumable.ConsumableType)) as Consumable.ConsumableType[];
 
+	[SerializeField] private GameObject starFx;
+	
 	public override void Populate()
     {
 		m_RefreshCallback = null;
@@ -95,7 +97,9 @@ public class ShopItemList : ShopList
 		PlayerData.instance.premium -= c.GetPremiumCost();
 		PlayerData.instance.Add(c.GetConsumableType());
         PlayerData.instance.Save();
-
+        starFx.transform.position = itemList.icon.transform.position;
+        starFx.SetActive(false);
+        starFx.SetActive(true);
 #if UNITY_ANALYTICS // Using Analytics Standard Events v0.3.0
         var transactionId = System.Guid.NewGuid().ToString();
         var transactionContext = "store";
