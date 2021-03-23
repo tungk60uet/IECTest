@@ -21,6 +21,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseDataBase.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/SROption.Debug.cs.cs" />
@@ -33,6 +36,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SROptions.Debug.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopItemList.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/LoadoutState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/FirebaseDataBase.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1q9wCLdKOmqsC73SZIZ2SmoPzzk" />
@@ -79,7 +84,7 @@
       <workItem from="1616506330910" duration="154000" />
       <workItem from="1616506499000" duration="1008000" />
       <workItem from="1616507571034" duration="603000" />
-      <workItem from="1616508317575" duration="3481000" />
+      <workItem from="1616508317575" duration="5124000" />
     </task>
     <servers />
   </component>

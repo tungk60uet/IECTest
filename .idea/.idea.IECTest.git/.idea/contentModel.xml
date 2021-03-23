@@ -19,6 +19,7 @@
           <e p="BundleAndBuild.cs" t="Include" />
         </e>
         <e p="EndlessRunner_Third-PartyNotice.txt" t="Include" />
+        <e p="FirebaseDataBase.cs" t="Include" />
         <e p="Font" t="Include">
           <e p="FontLicense.txt" t="Include" />
         </e>
@@ -190,6 +191,16 @@
         </e>
         <e p="Link.xml" t="Include" />
         <e p="Plugins" t="Include">
+          <e p="Android" t="Include">
+            <e p="FirebaseApp.androidlib" t="Include">
+              <e p="AndroidManifest.xml" t="Include" />
+              <e p="res" t="Include">
+                <e p="values" t="Include">
+                  <e p="google-services.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
               <e p="Modules" t="Include">

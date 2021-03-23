@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "323310528663",
+    "firebase_url": "https://iectest-135c3-default-rtdb.firebaseio.com",
+    "project_id": "iectest-135c3",
+    "storage_bucket": "iectest-135c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323310528663:android:06a926fb99547cb9bb21d2",
+        "android_client_info": {
+          "package_name": "com.tungteen.iectest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323310528663-f07pq8bfsdjq94r73mld3i6k5au3rdn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKA9hG4nUIVwQ64GwtACunY5e5Q1N0un4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323310528663-f07pq8bfsdjq94r73mld3i6k5au3rdn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

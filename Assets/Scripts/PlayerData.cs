@@ -32,7 +32,16 @@ public class PlayerData
     protected string saveFile = "";
 
 
-    public int coins;
+    private int _coin;
+
+    public int coins
+    {
+        get => _coin;
+        set
+        {
+            _coin = value;
+        } 
+    }
     public int premium;
     public Dictionary<Consumable.ConsumableType, int> consumables = new Dictionary<Consumable.ConsumableType, int>();   // Inventory of owned consumables and quantity.
 
