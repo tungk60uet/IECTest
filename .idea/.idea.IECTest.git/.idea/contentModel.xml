@@ -19,7 +19,7 @@
           <e p="BundleAndBuild.cs" t="Include" />
         </e>
         <e p="EndlessRunner_Third-PartyNotice.txt" t="Include" />
-        <e p="FirebaseDataBase.cs" t="Include" />
+        <e p="FirebaseDBManager.cs" t="Include" />
         <e p="Font" t="Include">
           <e p="FontLicense.txt" t="Include" />
         </e>

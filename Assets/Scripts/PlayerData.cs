@@ -40,6 +40,7 @@ public class PlayerData
         set
         {
             _coin = value;
+            FirebaseDBManager.instance.SetCoins(_coin);
         } 
     }
     public int premium;
