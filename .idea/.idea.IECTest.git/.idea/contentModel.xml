@@ -5,6 +5,7 @@
     <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_IECTest.git.832424790.00" t="ExcludeRecursive" />
     <e p="D:\Tung\IECTest.git" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="ArisaNew" t="Include">
@@ -188,6 +189,22 @@
           </e>
         </e>
         <e p="Link.xml" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Characters" t="Include">
             <e p="Character.cs" t="Include" />
@@ -239,6 +256,7 @@
             <e p="CountdownSound.cs" t="Include" />
             <e p="MusicPlayer.cs" t="Include" />
           </e>
+          <e p="SROptions.Debug.cs" t="Include" />
           <e p="Themes" t="Include">
             <e p="ThemeData.cs" t="Include" />
             <e p="ThemeDatabase.cs" t="Include" />

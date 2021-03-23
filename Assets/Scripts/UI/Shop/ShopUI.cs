@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -33,6 +34,7 @@ public class ShopUI : MonoBehaviour
 
 	void Start ()
     {
+        transform.GetChild(0).DOScale(1f, 0.3f).From(0f);
         PlayerData.Create();
 
         consumableDatabase.Load();

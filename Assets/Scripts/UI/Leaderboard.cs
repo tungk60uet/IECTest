@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 // Prefill the info on the player data, as they will be used to populate the leadboard.
 public class Leaderboard : MonoBehaviour
@@ -13,7 +14,7 @@ public class Leaderboard : MonoBehaviour
 	public void Open()
 	{
 		gameObject.SetActive(true);
-
+		transform.GetChild(0).DOScale(1f, 0.3f).From(0f);
 		Populate();
 	}
 

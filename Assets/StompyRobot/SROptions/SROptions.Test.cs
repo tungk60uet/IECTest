@@ -9,7 +9,6 @@ using SRF;
 using SRF.Service;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
-
 public partial class SROptions
 {
     // Uncomment the #define at the top of file to enable test options

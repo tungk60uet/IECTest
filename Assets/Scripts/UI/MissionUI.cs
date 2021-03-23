@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -12,7 +13,7 @@ public class MissionUI : MonoBehaviour
     public IEnumerator Open()
     {
         gameObject.SetActive(true);
-
+        transform.GetChild(0).DOScale(1f, 0.3f).From(0f);
         foreach (Transform t in missionPlace)
             Addressables.ReleaseInstance(t.gameObject);
 

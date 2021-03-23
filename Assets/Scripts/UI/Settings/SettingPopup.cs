@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -25,6 +26,7 @@ public class SettingPopup : MonoBehaviour
     public void Open()
     {
         gameObject.SetActive(true);
+        transform.GetChild(0).DOScale(1f, 0.3f).From(0f);
         UpdateUI();
     }
 
